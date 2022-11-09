@@ -53,7 +53,7 @@ ul {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1230px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -344,7 +344,7 @@ ul {
 .footer-socials {
     display: block;
     position: relative;
-    transform: translate(30%,-210%);
+    transform: translate(30%,-190%);
 }
 
 .footer-socials-list {
