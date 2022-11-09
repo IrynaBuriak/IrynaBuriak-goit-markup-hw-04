@@ -134,7 +134,7 @@ ul {
 /*hero*/
 
 .hero-header {
-    background-image: url(../images/hero-photo.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/hero-photo.jpg);
     background-repeat: no-repeat;
     padding: 200px 0;
 }
@@ -310,13 +310,13 @@ ul {
 /*footer*/
 .footer-contacts {
     background-color: #2F303A;
+    max-height: 252px;
 }
 
 .footer-logo {
     display: block;
     color: var(--c-white);
     padding-top: 60px;
-    padding-bottom: 20px;
 }
 
 .footer-contacts-list{
@@ -343,7 +343,7 @@ ul {
 .footer-socials {
     display: block;
     position: relative;
-    transform: translate(50%,-290%);
+    transform: translate(30%,-210%);
 }
 
 .footer-socials-list {
