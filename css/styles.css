@@ -38,10 +38,6 @@ body {
     font-size: 14px;
     line-height: 1.7142;
     letter-spacing: 0.03em;
-    max-width: 1600px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
 }
 
 ul {
@@ -53,7 +49,7 @@ ul {
 }
 
 .container {
-    max-width: 1230px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -78,17 +74,14 @@ ul {
     display: block;
 }
 
-.accent {
-    color: var(--accent-color);
-}
-
-.logo:hover,
-.logo:focus {
+.logo span {
     color: var(--accent-color);
 }
 
 .header-link {
+    display: inline-block;
     color: var(--header-text-color);
+    padding: 32px 0 31px;
 }
 
 .header-link:hover,
@@ -98,6 +91,9 @@ ul {
 
 .header-contact {
     color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .header-contact:hover,
@@ -108,41 +104,56 @@ ul {
 .header-block {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 32px 0;
-    max-width: 1600px;
-    max-height: 80px;
     border-bottom: 1px solid var(--bg-grey);
 }
+
 .header-icon {
     fill: currentColor;
 }
+
+.navigation {
+    margin-left: 91px;
+}
+
 .navigation-list {
     display: flex;
-    margin-right: 344px;
 }
 
-.navigation-item:not(last-child) {
-    margin: 50px;
+.navigation-item:not(:last-child) {
+    margin-right: 52px;
 }
 
+.contacts {
+    margin-left: auto;
+}
 .header-contacts {
     display: flex;
-    align-items:flex-end;
+    align-items: left;
     gap:50px;
 }
+
 
 /*hero*/
 
 .hero-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/hero-photo.jpg);
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-photo.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 200px 0;
+    display: block;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
+.hero-block {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
 .hero-title {
     color: var(--c-white);
-    width: 696px;
+    max-width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.3636;
@@ -170,9 +181,23 @@ ul {
 }
 
 /*advantages section*/
-.hidden {
-    visibility: hidden;
+
+.section-advantages {
+    padding-bottom: 0;
 }
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 
 .advantages-list {
     display: flex;
@@ -261,6 +286,7 @@ ul {
     color: var(--header-text-color);
 }
 
+
 .socials {
     display: flex;
     align-items: center;
@@ -283,6 +309,13 @@ ul {
 .social-item-link:hover,
 .social-item-link:focus {
     background-color: var(--accent-color);
+}
+
+.icon {
+    fill: #AFB1B8;
+}
+.icon:hover,
+.icon:focus {
     fill: var(--c-white);
 }
 
@@ -294,13 +327,20 @@ ul {
     gap:30px;;
 }
 
+.clients-icon {
+    fill: #AFB1B8;
+}
+.clients-icon:hover,
+.clients-icon:focus {
+    fill: var(--accent-color);
+}
 .clients-item-link {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 170px;
     height: 92px;
-    border: 1px solid var(--primary-text-color);
+    border: 1px solid #AFB1B8;;
     border-radius: 4px;
 }
 .clients-item-link:hover,
@@ -311,26 +351,34 @@ ul {
 /*footer*/
 .footer-contacts {
     background-color: #2F303A;
-    max-height: 252px;
+    padding: 60px 0;
 }
 
+.footer-block {
+    display: flex;
+}
 .footer-logo {
     display: block;
     color: var(--c-white);
-    padding-top: 60px;
 }
 
-.footer-contacts-list{
-    padding-bottom: 60px;
-}
+.footer-address {
+    display: block;
+    margin-right: 70px;
 
+}
 .footer-contacts-link {
     text-decoration: none;
     color: var(--c-grey);
     font-style:normal;
     display: block;
 }
-.footer-contacts-link:not(:last-child) {
+
+.footer-contacts-item:first-child {
+    margin-top: 20px;
+}
+
+.footer-contacts-item:not(:last-child) {
     margin-bottom: 9px;;
 }
 .footer-contacts-link:hover,
@@ -342,14 +390,17 @@ ul {
 }
 
 .footer-socials {
-    display: block;
-    position: relative;
-    transform: translate(30%,-190%);
+    display: block;  
+    margin-left: 70px;
 }
 
 .footer-socials-list {
     display: flex;
     gap: 10px;
+}
+
+.footer-item-link {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-socials-title {
@@ -359,9 +410,15 @@ ul {
     text-transform: uppercase;
     color: var(--c-white);
     margin-bottom: 20px;
+    display: block;
+}
+
+.footer-icon{
+    fill: var(--c-white);
 }
 
 /*Страница портфолио*/
+
 .filter-work-type {
     display: flex;
     justify-content: center;
@@ -397,14 +454,13 @@ ul {
     display: flex; 
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .work-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 20px;
     margin-bottom: 30px; 
 }
 .work-item> a {
