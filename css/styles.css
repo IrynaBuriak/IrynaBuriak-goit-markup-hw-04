@@ -6,6 +6,7 @@
     --c-black: #000000;
     --c-white: #fff;
     --c-grey: color: rgba(255, 255, 255, 0.6);
+    --c-lgrey: #AFB1B8;
 
     /* background color*/
     --bg-grey: #F5F4FA;
@@ -66,6 +67,7 @@ ul {
 /*header*/
 
 .logo {
+    font-family: Raleway;
     text-decoration: none;  
     color: var(--c-black);
     font-weight: 700;
@@ -278,6 +280,7 @@ ul {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.1875;
+    background-color: var(--bg-white);
 }
 
 .team-name {
@@ -306,48 +309,48 @@ ul {
     height: 44px;
     border-radius: 50%;
     background-color: var(--bg-white);
+    color: #AFB1B8;
 }
 
 .social-item-link:hover,
 .social-item-link:focus {
+    color: var(--c-white);
     background-color: var(--accent-color);
 }
 
 .icon {
-    fill: #AFB1B8;
+    fill: currentColor;
 }
-.icon:hover,
+/*.icon:hover,
 .icon:focus {
     fill: var(--c-white);
-}
+}*/
 
 /*section Постійні клієнти*/
 .clients-list {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:30px;;
+    gap:30px;
 }
 
 .clients-icon {
-    fill: #AFB1B8;
+    fill: currentColor;
 }
-.clients-icon:hover,
-.clients-icon:focus {
-    fill: var(--accent-color);
-}
+
 .clients-item-link {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8;;
+    border: 1px solid var(--c-lgrey);
     border-radius: 4px;
+    color: var(--c-lgrey);
 }
 .clients-item-link:hover,
 .clients-item-link:focus {
-    fill: var(--accent-color);
+    color: var(--accent-color);
     border: 1px solid var(--accent-color);
 }
 /*footer*/
@@ -426,7 +429,7 @@ ul {
     justify-content: center;
 }
 
-.work-type {
+.work-type-list {
     display: flex;
     margin-bottom: 20px;
 }
@@ -442,8 +445,7 @@ ul {
     background-color: var(--bg-grey);
     border: 0 solid var(--bg-grey);
     border-radius: 4px;
-    width: 125px;
-    height: 38px;
+    padding: 6px 22px;
 }
 
 .button:hover,
@@ -472,7 +474,14 @@ ul {
 }
 
 .work-item:hover {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.work-desc {
+    display: block;
+    padding: 20px 24px;
 }
 
 .work-title {
@@ -482,7 +491,6 @@ ul {
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--header-text-color);
-    margin-top: 20px;
     margin-bottom: 4px;
 }
 
@@ -494,6 +502,3 @@ ul {
     color: var(--primary-text-color);
 }
 
-.work-img {
-    display: block;
-}
