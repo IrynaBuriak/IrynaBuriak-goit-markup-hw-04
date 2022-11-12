@@ -86,14 +86,16 @@ ul {
 .header-link {
     display: inline-block;
     color: var(--header-text-color);
-    padding: 32px 0 31px;
+    padding: 32px 0 32px;
 }
 
 .header-link:hover,
 .header-link:focus {
     color: var(--accent-color);
 }
-
+.active {
+    color: var(--accent-color);
+}
 .header-contact {
     color: var(--primary-text-color);
     display: flex;
@@ -361,6 +363,7 @@ ul {
 
 .footer-block {
     display: flex;
+    align-items: baseline;
 }
 .footer-logo {
     display: block;
@@ -427,6 +430,7 @@ ul {
 .filter-work-type {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .work-type-list {
@@ -458,19 +462,19 @@ ul {
     display: flex; 
     flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 }
 
 .work-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
-    margin-bottom: 30px; 
 }
+
 .work-item> a {
     text-decoration: none;
     text-align: start;
-    border-bottom: 1px solid var(--bg-grey); 
+    display: block;
 }
 
 .work-item img {
@@ -486,6 +490,8 @@ ul {
 .work-desc {
     display: block;
     padding: 20px 24px;
+    border: 1px solid var(--bg-grey);
+    border-top: none;
 }
 
 .work-title {
